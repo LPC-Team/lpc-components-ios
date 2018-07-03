@@ -12,6 +12,7 @@ import MessageUI
 public final class MailContact {
     
     let viewController: UIViewController!
+    let image: UIImage!
     let title: String!
     let message: String!
     let contactEmail: String!
@@ -22,15 +23,17 @@ public final class MailContact {
     let contactActionsDelegate: ContactActionsDelegate!
     
     public init(_ viewController: UIViewController,
-         title: String,
-         message: String,
-         contactEmail: String,
-         openText: String,
-         copyText: String,
-         cancelText: String,
-         mailComposeDelegate: MFMailComposeViewControllerDelegate,
-         contactActionsDelegate: ContactActionsDelegate) {
+                image: UIImage,
+                title: String,
+                message: String,
+                contactEmail: String,
+                openText: String,
+                copyText: String,
+                cancelText: String,
+                mailComposeDelegate: MFMailComposeViewControllerDelegate,
+                contactActionsDelegate: ContactActionsDelegate) {
         self.viewController = viewController
+        self.image = image
         self.title = title
         self.message = message
         self.contactEmail = contactEmail
