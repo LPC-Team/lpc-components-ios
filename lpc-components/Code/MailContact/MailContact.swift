@@ -44,7 +44,7 @@ public final class MailContact {
     public final func show() {
         let actionSheetController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        let header = EmailActionSheetHeader(frame: CGRect(x: 0, y: 0, width: actionSheetController.view.bounds.size.width, height: EmailActionSheetHeader.viewHeight))
+        let header = EmailActionSheetHeader(frame: CGRect(x: 0, y: 0, width: actionSheetController.view.frame.size.width, height: EmailActionSheetHeader.viewHeight))
         header.title = self.title
         header.message = self.message
         header.contactEmail = self.contactEmail

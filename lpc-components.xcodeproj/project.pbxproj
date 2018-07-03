@@ -10,7 +10,6 @@
 		FFF153D520D158B300987EFD /* MailContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF153D420D158B300987EFD /* MailContact.swift */; };
 		FFF153D820D158CA00987EFD /* ContactActionsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF153D720D158CA00987EFD /* ContactActionsDelegate.swift */; };
 		FFF153DB20D158EF00987EFD /* EmailActionSheetHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF153DA20D158EF00987EFD /* EmailActionSheetHeader.swift */; };
-		FFF153DD20D1591A00987EFD /* EmailActionSheetHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF153DC20D1591A00987EFD /* EmailActionSheetHeader.xib */; };
 		FFF153E020D1594F00987EFD /* UIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF153DF20D1594F00987EFD /* UIKit+Extension.swift */; };
 		FFF153E220D1598700987EFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFF153E120D1598700987EFD /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -21,7 +20,6 @@
 		FFF153D420D158B300987EFD /* MailContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailContact.swift; sourceTree = "<group>"; };
 		FFF153D720D158CA00987EFD /* ContactActionsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactActionsDelegate.swift; sourceTree = "<group>"; };
 		FFF153DA20D158EF00987EFD /* EmailActionSheetHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailActionSheetHeader.swift; sourceTree = "<group>"; };
-		FFF153DC20D1591A00987EFD /* EmailActionSheetHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailActionSheetHeader.xib; sourceTree = "<group>"; };
 		FFF153DF20D1594F00987EFD /* UIKit+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extension.swift"; sourceTree = "<group>"; };
 		FFF153E120D1598700987EFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				FFF153DA20D158EF00987EFD /* EmailActionSheetHeader.swift */,
-				FFF153DC20D1591A00987EFD /* EmailActionSheetHeader.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,7 +181,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFF153E220D1598700987EFD /* Assets.xcassets in Resources */,
-				FFF153DD20D1591A00987EFD /* EmailActionSheetHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

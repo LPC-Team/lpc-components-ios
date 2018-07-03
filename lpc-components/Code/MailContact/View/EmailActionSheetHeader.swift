@@ -14,10 +14,9 @@ final class EmailActionSheetHeader: UIView {
     
     // MARK: Overrides
     
-    @IBOutlet weak private var ibImageView: UIImageView!
-    @IBOutlet weak private var ibTitleLabel: UILabel!
-    @IBOutlet weak private var ibMessageLabel: UILabel!
-    @IBOutlet weak private var ibEmailLabel: UILabel!
+    private var ibTitleLabel: UILabel!
+    private var ibMessageLabel: UILabel!
+    private var ibEmailLabel: UILabel!
     
     // MARK: Properties
     
@@ -46,9 +45,32 @@ final class EmailActionSheetHeader: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        if let view = loadNib() {
-            view.frame = bounds
-            addSubview(view)
-        }
+        let view = UIView()
+        view.frame = CGRect(x: 0, y: 0, width: frame.width - 30, height: frame.height)
+
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 20, width: 70, height: 52))
+        imageView.image = UIImage(named: "contact.png")
+        imageView.center.x = view.center.x
+        view.addSubview(imageView)
+        
+        self.ibTitleLabel = UILabel(frame: CGRect(x: 0, y: imageView.frame.maxY + 15, width: view.frame.width, height: 21))
+        self.ibTitleLabel.textAlignment = .center
+        self.ibTitleLabel.font = UIFont.systemFont(ofSize: 22, weight: .bold)
+        self.ibTitleLabel.textColor = UIColor(red: 67/255, green: 74/255, blue: 84/255, alpha: 1.0)
+        view.addSubview(self.ibTitleLabel)
+        
+        self.ibMessageLabel = UILabel(frame: CGRect(x: 0, y: self.ibTitleLabel.frame.maxY + 15, width: view.frame.width, height: 21))
+        self.ibMessageLabel.textAlignment = .center
+        self.ibMessageLabel.font = UIFont.systemFont(ofSize: 15)
+        self.ibMessageLabel.textColor = UIColor(red: 67/255, green: 74/255, blue: 84/255, alpha: 1.0)
+        view.addSubview(self.ibMessageLabel)
+        
+        self.ibEmailLabel = UILabel(frame: CGRect(x: 0, y: self.ibMessageLabel.frame.maxY + 2.5, width: view.frame.width, height: 21))
+        self.ibEmailLabel.textAlignment = .center
+        self.ibEmailLabel.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
+        self.ibEmailLabel.textColor = UIColor(red: 226/255, green: 43/255, blue: 118/255, alpha: 1.0)
+        view.addSubview(self.ibEmailLabel)
+        
+        addSubview(view)
     }
 }

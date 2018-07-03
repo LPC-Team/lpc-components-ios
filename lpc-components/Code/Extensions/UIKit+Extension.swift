@@ -8,26 +8,12 @@
 
 import UIKit
 
-extension UIView {
-    // MARK: UIView
-    
-    func loadNib() -> UIView? {
-        let bundle = Bundle(for: type(of: self))
-        if let nibName = type(of: self).description().components(separatedBy: ".").last {
-            let nib = UINib(nibName: nibName, bundle: bundle)
-            return nib.instantiate(withOwner: self, options: nil).first as? UIView
-        }
-        return nil
-    }
-}
-
 extension UIAlertController {
     // MARK: UIAlertController
     
     func addHeader(_ header: UIView) {
         // FIXME: This is a hack to avoid a header view for the UIAlertAction
-        let margin: CGFloat = 10.0
-        let rect = CGRect(x: margin, y: margin, width: header.frame.size.width - margin * 4.0, height: header.frame.size.height)
+        let rect = CGRect(x: 0, y: 0, width: header.frame.size.width, height: header.frame.size.height)
         header.frame = rect
         
         let headerHeight = header.frame.height
