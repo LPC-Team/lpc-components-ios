@@ -14,11 +14,18 @@ final class EmailActionSheetHeader: UIView {
     
     // MARK: Overrides
     
+    private var ibImageView: UIImageView!
     private var ibTitleLabel: UILabel!
     private var ibMessageLabel: UILabel!
     private var ibEmailLabel: UILabel!
     
     // MARK: Properties
+    
+    var image: UIImage? {
+        didSet {
+            self.ibImageView.image = self.image
+        }
+    }
     
     var title: String = "" {
         didSet {
@@ -48,12 +55,11 @@ final class EmailActionSheetHeader: UIView {
         let view = UIView()
         view.frame = CGRect(x: 0, y: 0, width: frame.width - 30, height: frame.height)
 
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 20, width: 70, height: 52))
-        imageView.image = UIImage(named: "contact.png")
-        imageView.center.x = view.center.x
-        view.addSubview(imageView)
+        self.ibImageView = UIImageView(frame: CGRect(x: 0, y: 20, width: 70, height: 52))
+        ibImageView.center.x = view.center.x
+        view.addSubview(self.ibImageView)
         
-        self.ibTitleLabel = UILabel(frame: CGRect(x: 0, y: imageView.frame.maxY + 15, width: view.frame.width, height: 21))
+        self.ibTitleLabel = UILabel(frame: CGRect(x: 0, y: self.ibImageView.frame.maxY + 15, width: view.frame.width, height: 21))
         self.ibTitleLabel.textAlignment = .center
         self.ibTitleLabel.font = UIFont.systemFont(ofSize: 22, weight: .bold)
         self.ibTitleLabel.textColor = UIColor(red: 67/255, green: 74/255, blue: 84/255, alpha: 1.0)

@@ -11,7 +11,6 @@
 		FFF153D820D158CA00987EFD /* ContactActionsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF153D720D158CA00987EFD /* ContactActionsDelegate.swift */; };
 		FFF153DB20D158EF00987EFD /* EmailActionSheetHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF153DA20D158EF00987EFD /* EmailActionSheetHeader.swift */; };
 		FFF153E020D1594F00987EFD /* UIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF153DF20D1594F00987EFD /* UIKit+Extension.swift */; };
-		FFF153E220D1598700987EFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFF153E120D1598700987EFD /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +20,6 @@
 		FFF153D720D158CA00987EFD /* ContactActionsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactActionsDelegate.swift; sourceTree = "<group>"; };
 		FFF153DA20D158EF00987EFD /* EmailActionSheetHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailActionSheetHeader.swift; sourceTree = "<group>"; };
 		FFF153DF20D1594F00987EFD /* UIKit+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extension.swift"; sourceTree = "<group>"; };
-		FFF153E120D1598700987EFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,18 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				FFF153D320D158A500987EFD /* Code */,
-				FFF153D220D1589E00987EFD /* Ressources */,
 				FFF153CB20D1588600987EFD /* Info.plist */,
 			);
 			path = "lpc-components";
-			sourceTree = "<group>";
-		};
-		FFF153D220D1589E00987EFD /* Ressources */ = {
-			isa = PBXGroup;
-			children = (
-				FFF153E120D1598700987EFD /* Assets.xcassets */,
-			);
-			path = Ressources;
 			sourceTree = "<group>";
 		};
 		FFF153D320D158A500987EFD /* Code */ = {
@@ -180,7 +169,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFF153E220D1598700987EFD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
