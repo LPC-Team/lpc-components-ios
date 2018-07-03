@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<device id="retina4_7" orientation="portrait">
+<adaptation id="fullscreen"/>
+</device>
+<dependencies>
+<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+<capability name="Safe area layout guides" minToolsVersion="9.0"/>
+<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+</dependencies>
+<objects>
+<placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmailActionSheetHeader" customModule="LePotCommunPreprod" customModuleProvider="target">
+<connections>
+<outlet property="ibEmailLabel" destination="ix3-wE-HwO" id="wGp-lV-bfT"/>
+<outlet property="ibImageView" destination="Z06-e7-66Z" id="9X9-Af-EIp"/>
+<outlet property="ibMessageLabel" destination="2em-2D-oJp" id="JqE-pE-Lt0"/>
+<outlet property="ibTitleLabel" destination="8TV-6O-ubC" id="w7I-is-0n6"/>
+</connections>
+</placeholder>
+<placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+<view contentMode="scaleToFill" id="iN0-l3-epB">
+<rect key="frame" x="0.0" y="0.0" width="375" height="187"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Contact" translatesAutoresizingMaskIntoConstraints="NO" id="Z06-e7-66Z">
+<rect key="frame" x="152.5" y="20" width="70" height="52"/>
+<constraints>
+<constraint firstAttribute="height" constant="52" id="INk-NY-Ixf"/>
+<constraint firstAttribute="width" constant="70" id="e2u-t5-SSe"/>
+</constraints>
+</imageView>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Contactez-nous&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TV-6O-ubC">
+<rect key="frame" x="0.0" y="87" width="375" height="26"/>
+<fontDescription key="fontDescription" type="system" pointSize="22"/>
+<color key="textColor" red="0.2627450980392157" green="0.29019607843137252" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+<nil key="highlightedColor"/>
+</label>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Vous pouvez nous contacter à cette adresse :&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2em-2D-oJp">
+<rect key="frame" x="0.0" y="127.5" width="375" height="18"/>
+<fontDescription key="fontDescription" type="system" pointSize="15"/>
+<color key="textColor" red="0.2627450980392157" green="0.29019607843137252" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+<nil key="highlightedColor"/>
+</label>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;contact@lepotcommun.fr&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ix3-wE-HwO">
+<rect key="frame" x="0.0" y="148" width="375" height="18"/>
+<fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+<color key="textColor" red="0.88627450980392153" green="0.16862745098039217" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
+<nil key="highlightedColor"/>
+</label>
+</subviews>
+<color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+<constraints>
+<constraint firstItem="2em-2D-oJp" firstAttribute="leading" secondItem="8TV-6O-ubC" secondAttribute="leading" id="CNv-MT-IxT"/>
+<constraint firstItem="2em-2D-oJp" firstAttribute="trailing" secondItem="8TV-6O-ubC" secondAttribute="trailing" id="G9d-uS-hZB"/>
+<constraint firstItem="Z06-e7-66Z" firstAttribute="centerX" secondItem="8TV-6O-ubC" secondAttribute="centerX" id="HJa-IB-u7E"/>
+<constraint firstItem="2em-2D-oJp" firstAttribute="top" secondItem="8TV-6O-ubC" secondAttribute="bottom" constant="15" id="HcG-OP-G4t"/>
+<constraint firstItem="Z06-e7-66Z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="N3n-hD-ixo"/>
+<constraint firstItem="8TV-6O-ubC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="PGy-XL-9nt"/>
+<constraint firstItem="ix3-wE-HwO" firstAttribute="leading" secondItem="8TV-6O-ubC" secondAttribute="leading" id="bnE-Wd-k0f"/>
+<constraint firstItem="ix3-wE-HwO" firstAttribute="trailing" secondItem="8TV-6O-ubC" secondAttribute="trailing" id="c6i-ME-Kpd"/>
+<constraint firstAttribute="trailing" secondItem="8TV-6O-ubC" secondAttribute="trailing" id="eRS-jV-6EK"/>
+<constraint firstItem="ix3-wE-HwO" firstAttribute="top" secondItem="2em-2D-oJp" secondAttribute="bottom" constant="2.5" id="h83-qW-aVR"/>
+<constraint firstItem="8TV-6O-ubC" firstAttribute="top" secondItem="Z06-e7-66Z" secondAttribute="bottom" constant="15" id="vP7-OO-5cE"/>
+</constraints>
+<freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+<viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+<point key="canvasLocation" x="31.5" y="-36.5"/>
+</view>
+</objects>
+<resources>
+<image name="Contact" width="70" height="52"/>
+</resources>
+</document>
