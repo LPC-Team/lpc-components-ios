@@ -19,8 +19,6 @@ public final class MailContact {
     let openText: String!
     let copyText: String!
     let cancelText: String!
-    let mailComposeDelegate: MFMailComposeViewControllerDelegate!
-    let contactActionsDelegate: ContactActionsDelegate!
     
     public init(_ viewController: UIViewController,
                 image: UIImage,
@@ -29,9 +27,7 @@ public final class MailContact {
                 contactEmail: String,
                 openText: String,
                 copyText: String,
-                cancelText: String,
-                mailComposeDelegate: MFMailComposeViewControllerDelegate,
-                contactActionsDelegate: ContactActionsDelegate) {
+                cancelText: String) {
         self.viewController = viewController
         self.image = image
         self.title = title
@@ -40,8 +36,6 @@ public final class MailContact {
         self.openText = openText
         self.copyText = copyText
         self.cancelText = cancelText
-        self.mailComposeDelegate = mailComposeDelegate
-        self.contactActionsDelegate = contactActionsDelegate
     }
     
     public final func show() {
@@ -61,7 +55,10 @@ public final class MailContact {
         let sendEmailButton = UIAlertAction(title: openText, style: .default) { _ -> Void in
             let composeVC = MFMailComposeViewController()
             if MFMailComposeViewController.canSendMail() {
-                composeVC.mailComposeDelegate = self.mailComposeDelegate
+                guard let mailComposeDelegate = self.viewController as? MFMailComposeViewControllerDelegate else {
+                    fatalError("Your viewController \(self.viewController) must implement MFMailComposeViewControllerDelegate")
+                }
+                composeVC.mailComposeDelegate = mailComposeDelegate
                 composeVC.setToRecipients([self.contactEmail])
                 self.viewController.present(composeVC, animated: true, completion: nil)
             }
@@ -71,7 +68,10 @@ public final class MailContact {
         let copyAdressActionButton = UIAlertAction(title: copyText, style: .default) { _ -> Void in
             //Mail copied
             UIPasteboard.general.string = self.contactEmail
-            self.contactActionsDelegate.onCopyMail()
+            guard let contactActionsDelegate = self.viewController as? ContactActionsDelegate else {
+                fatalError("Your viewController \(self.viewController) must implement ContactActionsDelegate")
+            }
+            contactActionsDelegate.onCopyMail()
         }
         actionSheetController.addAction(copyAdressActionButton)
         
