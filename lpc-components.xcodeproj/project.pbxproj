@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FFF153D520D158B300987EFD /* MailContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF153D420D158B300987EFD /* MailContact.swift */; };
+		FFB73C2620ECFB7E00E42EC8 /* LPCRipple.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB73C2520ECFB7E00E42EC8 /* LPCRipple.swift */; };
+		FFB73C2820ECFB9D00E42EC8 /* LPCRippleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB73C2720ECFB9D00E42EC8 /* LPCRippleView.swift */; };
+		FFB73C2B20ECFC3000E42EC8 /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB73C2A20ECFC3000E42EC8 /* AnimationType.swift */; };
+		FFB73C2D20ECFC3D00E42EC8 /* LayerAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB73C2C20ECFC3D00E42EC8 /* LayerAnimator.swift */; };
+		FFB73C3020ECFCBD00E42EC8 /* UIKit+Extension+Ripple.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB73C2F20ECFCBD00E42EC8 /* UIKit+Extension+Ripple.swift */; };
+		FFF153D520D158B300987EFD /* LPCMailContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF153D420D158B300987EFD /* LPCMailContact.swift */; };
 		FFF153D820D158CA00987EFD /* ContactActionsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF153D720D158CA00987EFD /* ContactActionsDelegate.swift */; };
 		FFF153DB20D158EF00987EFD /* EmailActionSheetHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF153DA20D158EF00987EFD /* EmailActionSheetHeader.swift */; };
-		FFF153E020D1594F00987EFD /* UIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF153DF20D1594F00987EFD /* UIKit+Extension.swift */; };
+		FFF153E020D1594F00987EFD /* UIKit+Extension+MailContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF153DF20D1594F00987EFD /* UIKit+Extension+MailContact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FFB73C2520ECFB7E00E42EC8 /* LPCRipple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPCRipple.swift; sourceTree = "<group>"; };
+		FFB73C2720ECFB9D00E42EC8 /* LPCRippleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPCRippleView.swift; sourceTree = "<group>"; };
+		FFB73C2A20ECFC3000E42EC8 /* AnimationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
+		FFB73C2C20ECFC3D00E42EC8 /* LayerAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerAnimator.swift; sourceTree = "<group>"; };
+		FFB73C2F20ECFCBD00E42EC8 /* UIKit+Extension+Ripple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extension+Ripple.swift"; sourceTree = "<group>"; };
 		FFF153C720D1588600987EFD /* lpc_components.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = lpc_components.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF153CB20D1588600987EFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FFF153D420D158B300987EFD /* MailContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailContact.swift; sourceTree = "<group>"; };
+		FFF153D420D158B300987EFD /* LPCMailContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPCMailContact.swift; sourceTree = "<group>"; };
 		FFF153D720D158CA00987EFD /* ContactActionsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactActionsDelegate.swift; sourceTree = "<group>"; };
 		FFF153DA20D158EF00987EFD /* EmailActionSheetHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailActionSheetHeader.swift; sourceTree = "<group>"; };
-		FFF153DF20D1594F00987EFD /* UIKit+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extension.swift"; sourceTree = "<group>"; };
+		FFF153DF20D1594F00987EFD /* UIKit+Extension+MailContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extension+MailContact.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,11 +46,40 @@
 		FF9F1A1E20EB8B9200EBA800 /* MailContact */ = {
 			isa = PBXGroup;
 			children = (
+				FFF153DE20D1593E00987EFD /* Extensions */,
 				FFF153D920D158DD00987EFD /* View */,
 				FFF153D620D158C000987EFD /* Protocols */,
-				FFF153D420D158B300987EFD /* MailContact.swift */,
+				FFF153D420D158B300987EFD /* LPCMailContact.swift */,
 			);
 			path = MailContact;
+			sourceTree = "<group>";
+		};
+		FFB73C2420ECFB4A00E42EC8 /* Ripple */ = {
+			isa = PBXGroup;
+			children = (
+				FFB73C2E20ECFCB100E42EC8 /* Extension */,
+				FFB73C2920ECFC2300E42EC8 /* Animation */,
+				FFB73C2720ECFB9D00E42EC8 /* LPCRippleView.swift */,
+				FFB73C2520ECFB7E00E42EC8 /* LPCRipple.swift */,
+			);
+			path = Ripple;
+			sourceTree = "<group>";
+		};
+		FFB73C2920ECFC2300E42EC8 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				FFB73C2A20ECFC3000E42EC8 /* AnimationType.swift */,
+				FFB73C2C20ECFC3D00E42EC8 /* LayerAnimator.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		FFB73C2E20ECFCB100E42EC8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FFB73C2F20ECFCBD00E42EC8 /* UIKit+Extension+Ripple.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		FFF153BD20D1588600987EFD = {
@@ -71,8 +110,8 @@
 		FFF153D320D158A500987EFD /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				FFF153DE20D1593E00987EFD /* Extensions */,
 				FF9F1A1E20EB8B9200EBA800 /* MailContact */,
+				FFB73C2420ECFB4A00E42EC8 /* Ripple */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -96,7 +135,7 @@
 		FFF153DE20D1593E00987EFD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FFF153DF20D1594F00987EFD /* UIKit+Extension.swift */,
+				FFF153DF20D1594F00987EFD /* UIKit+Extension+MailContact.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -179,9 +218,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFB73C2820ECFB9D00E42EC8 /* LPCRippleView.swift in Sources */,
 				FFF153DB20D158EF00987EFD /* EmailActionSheetHeader.swift in Sources */,
-				FFF153D520D158B300987EFD /* MailContact.swift in Sources */,
-				FFF153E020D1594F00987EFD /* UIKit+Extension.swift in Sources */,
+				FFF153D520D158B300987EFD /* LPCMailContact.swift in Sources */,
+				FFB73C2B20ECFC3000E42EC8 /* AnimationType.swift in Sources */,
+				FFB73C2620ECFB7E00E42EC8 /* LPCRipple.swift in Sources */,
+				FFF153E020D1594F00987EFD /* UIKit+Extension+MailContact.swift in Sources */,
+				FFB73C2D20ECFC3D00E42EC8 /* LayerAnimator.swift in Sources */,
+				FFB73C3020ECFCBD00E42EC8 /* UIKit+Extension+Ripple.swift in Sources */,
 				FFF153D820D158CA00987EFD /* ContactActionsDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

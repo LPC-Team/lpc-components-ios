@@ -9,7 +9,7 @@
 import UIKit
 import MessageUI
 
-public final class MailContact {
+public final class LPCMailContact {
     
     let viewController: UIViewController!
     let image: UIImage!
@@ -19,6 +19,8 @@ public final class MailContact {
     let openText: String!
     let copyText: String!
     let cancelText: String!
+    let mailComposeDelegate: MFMailComposeViewControllerDelegate!
+    let contactActionsDelegate: ContactActionsDelegate!
     
     public init(_ viewController: UIViewController,
                 image: UIImage,
@@ -27,7 +29,9 @@ public final class MailContact {
                 contactEmail: String,
                 openText: String,
                 copyText: String,
-                cancelText: String) {
+                cancelText: String,
+                mailComposeDelegate: MFMailComposeViewControllerDelegate,
+                contactActionsDelegate: ContactActionsDelegate) {
         self.viewController = viewController
         self.image = image
         self.title = title
@@ -36,6 +40,27 @@ public final class MailContact {
         self.openText = openText
         self.copyText = copyText
         self.cancelText = cancelText
+        self.mailComposeDelegate = mailComposeDelegate
+        self.contactActionsDelegate = contactActionsDelegate
+    }
+    
+    public convenience init(_ viewController: UIViewController,
+                image: UIImage,
+                title: String,
+                message: String,
+                contactEmail: String,
+                openText: String,
+                copyText: String,
+                cancelText: String) {
+        guard let mailComposeDelegate = viewController as? MFMailComposeViewControllerDelegate else {
+            fatalError("Your viewController \(viewController) must implement MFMailComposeViewControllerDelegate")
+        }
+        
+        guard let contactActionsDelegate = viewController as? ContactActionsDelegate else {
+            fatalError("Your viewController \(viewController) must implement ContactActionsDelegate")
+        }
+        
+        self.init(viewController, image: image, title: title, message: message, contactEmail: contactEmail, openText: openText, copyText: copyText, cancelText: cancelText, mailComposeDelegate: mailComposeDelegate, contactActionsDelegate: contactActionsDelegate)
     }
     
     public final func show() {
@@ -55,10 +80,7 @@ public final class MailContact {
         let sendEmailButton = UIAlertAction(title: openText, style: .default) { _ -> Void in
             let composeVC = MFMailComposeViewController()
             if MFMailComposeViewController.canSendMail() {
-                guard let mailComposeDelegate = self.viewController as? MFMailComposeViewControllerDelegate else {
-                    fatalError("Your viewController \(self.viewController) must implement MFMailComposeViewControllerDelegate")
-                }
-                composeVC.mailComposeDelegate = mailComposeDelegate
+                composeVC.mailComposeDelegate = self.mailComposeDelegate
                 composeVC.setToRecipients([self.contactEmail])
                 self.viewController.present(composeVC, animated: true, completion: nil)
             }
@@ -68,10 +90,7 @@ public final class MailContact {
         let copyAdressActionButton = UIAlertAction(title: copyText, style: .default) { _ -> Void in
             //Mail copied
             UIPasteboard.general.string = self.contactEmail
-            guard let contactActionsDelegate = self.viewController as? ContactActionsDelegate else {
-                fatalError("Your viewController \(self.viewController) must implement ContactActionsDelegate")
-            }
-            contactActionsDelegate.onCopyMail()
+            self.contactActionsDelegate.onCopyMail()
         }
         actionSheetController.addAction(copyAdressActionButton)
         
