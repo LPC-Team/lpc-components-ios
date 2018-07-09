@@ -11,12 +11,8 @@ import UIKit
 extension UIAlertController {
     // MARK: UIAlertController
     
-    func addHeader(_ header: UIView) {
+    func prepareHeader(headerHeight: CGFloat) {
         // FIXME: This is a hack to avoid a header view for the UIAlertAction
-        let rect = CGRect(x: 0, y: 0, width: header.frame.size.width, height: header.frame.size.height)
-        header.frame = rect
-        
-        let headerHeight = header.frame.height
         let lineBreakHeight: CGFloat = 20 // An estimation of the lineBreak height inside the title
         let lineBreakNumber = Int(headerHeight / lineBreakHeight)
         
@@ -27,7 +23,15 @@ extension UIAlertController {
         
         if !title.isEmpty {
             self.title = title
-            view.addSubview(header)
         }
+    }
+    
+    func addHeader(_ header: UIView) {
+        // FIXME: This is a hack to avoid a header view for the UIAlertAction
+        let rect = CGRect(x: 0, y: 0, width: header.frame.size.width, height: header.frame.size.height)
+        header.frame = rect
+        
+        prepareHeader(headerHeight: header.frame.height)
+        view.addSubview(header)
     }
 }

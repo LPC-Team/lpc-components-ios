@@ -10,9 +10,7 @@ import UIKit
 
 final class EmailActionSheetHeader: UIView {
     
-    static let viewHeight: CGFloat = 180
-    
-    // MARK: Overrides
+    // MARK: Outlets
     
     private var ibImageView: UIImageView!
     private var ibTitleLabel: UILabel!
@@ -20,6 +18,8 @@ final class EmailActionSheetHeader: UIView {
     private var ibEmailLabel: UILabel!
     
     // MARK: Properties
+    
+    static let viewHeight: CGFloat = 180
     
     var image: UIImage? {
         didSet {
@@ -44,6 +44,8 @@ final class EmailActionSheetHeader: UIView {
             self.ibEmailLabel.text = self.contactEmail
         }
     }
+    
+    // MARK: Constructors
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("This custom view must not be used inside a .xib file")
