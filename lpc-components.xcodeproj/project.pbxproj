@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF319B2820F4ABF0000A5826 /* LoadingHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF319B2720F4ABF0000A5826 /* LoadingHUD.swift */; };
+		FF319B2A20F4AC12000A5826 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF319B2920F4AC12000A5826 /* LoadingView.swift */; };
+		FF319B2C20F4AC26000A5826 /* SVRadialGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF319B2B20F4AC26000A5826 /* SVRadialGradientLayer.swift */; };
+		FF319B2F20F4AC3F000A5826 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF319B2E20F4AC3F000A5826 /* UIColor+Extensions.swift */; };
+		FF319B3120F4AC5A000A5826 /* UIPullToRefreshTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF319B3020F4AC5A000A5826 /* UIPullToRefreshTableView.swift */; };
 		FFB73C2620ECFB7E00E42EC8 /* LPCRipple.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB73C2520ECFB7E00E42EC8 /* LPCRipple.swift */; };
 		FFB73C2820ECFB9D00E42EC8 /* LPCRippleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB73C2720ECFB9D00E42EC8 /* LPCRippleView.swift */; };
 		FFB73C2B20ECFC3000E42EC8 /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB73C2A20ECFC3000E42EC8 /* AnimationType.swift */; };
@@ -19,6 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF319B2720F4ABF0000A5826 /* LoadingHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingHUD.swift; sourceTree = "<group>"; };
+		FF319B2920F4AC12000A5826 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		FF319B2B20F4AC26000A5826 /* SVRadialGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVRadialGradientLayer.swift; sourceTree = "<group>"; };
+		FF319B2E20F4AC3F000A5826 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		FF319B3020F4AC5A000A5826 /* UIPullToRefreshTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPullToRefreshTableView.swift; sourceTree = "<group>"; };
 		FFB73C2520ECFB7E00E42EC8 /* LPCRipple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPCRipple.swift; sourceTree = "<group>"; };
 		FFB73C2720ECFB9D00E42EC8 /* LPCRippleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPCRippleView.swift; sourceTree = "<group>"; };
 		FFB73C2A20ECFC3000E42EC8 /* AnimationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
@@ -43,6 +53,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF319B2620F4AA56000A5826 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				FF319B2D20F4AC35000A5826 /* Extension */,
+				FF319B2720F4ABF0000A5826 /* LoadingHUD.swift */,
+				FF319B2920F4AC12000A5826 /* LoadingView.swift */,
+				FF319B2B20F4AC26000A5826 /* SVRadialGradientLayer.swift */,
+				FF319B3020F4AC5A000A5826 /* UIPullToRefreshTableView.swift */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		FF319B2D20F4AC35000A5826 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FF319B2E20F4AC3F000A5826 /* UIColor+Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		FF9F1A1E20EB8B9200EBA800 /* MailContact */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +140,7 @@
 		FFF153D320D158A500987EFD /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				FF319B2620F4AA56000A5826 /* LoadingView */,
 				FF9F1A1E20EB8B9200EBA800 /* MailContact */,
 				FFB73C2420ECFB4A00E42EC8 /* Ripple */,
 			);
@@ -219,14 +250,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFB73C2820ECFB9D00E42EC8 /* LPCRippleView.swift in Sources */,
+				FF319B3120F4AC5A000A5826 /* UIPullToRefreshTableView.swift in Sources */,
 				FFF153DB20D158EF00987EFD /* EmailActionSheetHeader.swift in Sources */,
 				FFF153D520D158B300987EFD /* LPCMailContact.swift in Sources */,
+				FF319B2F20F4AC3F000A5826 /* UIColor+Extensions.swift in Sources */,
+				FF319B2A20F4AC12000A5826 /* LoadingView.swift in Sources */,
 				FFB73C2B20ECFC3000E42EC8 /* AnimationType.swift in Sources */,
+				FF319B2820F4ABF0000A5826 /* LoadingHUD.swift in Sources */,
 				FFB73C2620ECFB7E00E42EC8 /* LPCRipple.swift in Sources */,
 				FFF153E020D1594F00987EFD /* UIKit+Extension+MailContact.swift in Sources */,
 				FFB73C2D20ECFC3D00E42EC8 /* LayerAnimator.swift in Sources */,
 				FFB73C3020ECFCBD00E42EC8 /* UIKit+Extension+Ripple.swift in Sources */,
 				FFF153D820D158CA00987EFD /* ContactActionsDelegate.swift in Sources */,
+				FF319B2C20F4AC26000A5826 /* SVRadialGradientLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
