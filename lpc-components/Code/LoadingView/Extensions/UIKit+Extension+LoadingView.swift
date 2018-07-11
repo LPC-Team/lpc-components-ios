@@ -1,5 +1,5 @@
 //
-//  UIColor+Extensions.swift
+//  UIKit+Extension+LoadingView.swift
 //  lpc-components
 //
 //  Created by Alaeddine Ouertani on 25/10/2017.
