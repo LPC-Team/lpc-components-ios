@@ -12,6 +12,9 @@
 		FF319B2C20F4AC26000A5826 /* SVRadialGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF319B2B20F4AC26000A5826 /* SVRadialGradientLayer.swift */; };
 		FF319B2F20F4AC3F000A5826 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF319B2E20F4AC3F000A5826 /* UIColor+Extensions.swift */; };
 		FF319B3120F4AC5A000A5826 /* UIPullToRefreshTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF319B3020F4AC5A000A5826 /* UIPullToRefreshTableView.swift */; };
+		FF46D94B20F62C9E005E3018 /* OfflineBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF46D94A20F62C9E005E3018 /* OfflineBannerView.swift */; };
+		FF46D94D20F62CBB005E3018 /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF46D94C20F62CBB005E3018 /* DeviceHelper.swift */; };
+		FF46D94F20F62CD1005E3018 /* Foundation+Extension+OfflineBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF46D94E20F62CD1005E3018 /* Foundation+Extension+OfflineBanner.swift */; };
 		FFB73C2620ECFB7E00E42EC8 /* LPCRipple.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB73C2520ECFB7E00E42EC8 /* LPCRipple.swift */; };
 		FFB73C2820ECFB9D00E42EC8 /* LPCRippleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB73C2720ECFB9D00E42EC8 /* LPCRippleView.swift */; };
 		FFB73C2B20ECFC3000E42EC8 /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB73C2A20ECFC3000E42EC8 /* AnimationType.swift */; };
@@ -29,6 +32,9 @@
 		FF319B2B20F4AC26000A5826 /* SVRadialGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVRadialGradientLayer.swift; sourceTree = "<group>"; };
 		FF319B2E20F4AC3F000A5826 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		FF319B3020F4AC5A000A5826 /* UIPullToRefreshTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPullToRefreshTableView.swift; sourceTree = "<group>"; };
+		FF46D94A20F62C9E005E3018 /* OfflineBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineBannerView.swift; sourceTree = "<group>"; };
+		FF46D94C20F62CBB005E3018 /* DeviceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
+		FF46D94E20F62CD1005E3018 /* Foundation+Extension+OfflineBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Extension+OfflineBanner.swift"; sourceTree = "<group>"; };
 		FFB73C2520ECFB7E00E42EC8 /* LPCRipple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPCRipple.swift; sourceTree = "<group>"; };
 		FFB73C2720ECFB9D00E42EC8 /* LPCRippleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPCRippleView.swift; sourceTree = "<group>"; };
 		FFB73C2A20ECFC3000E42EC8 /* AnimationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
@@ -71,6 +77,32 @@
 				FF319B2E20F4AC3F000A5826 /* UIColor+Extensions.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		FF46D94720F62C5B005E3018 /* OfflineBannerView */ = {
+			isa = PBXGroup;
+			children = (
+				FF46D94820F62C85005E3018 /* Extensions */,
+				FF46D94920F62C8D005E3018 /* Helpers */,
+				FF46D94A20F62C9E005E3018 /* OfflineBannerView.swift */,
+			);
+			path = OfflineBannerView;
+			sourceTree = "<group>";
+		};
+		FF46D94820F62C85005E3018 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FF46D94E20F62CD1005E3018 /* Foundation+Extension+OfflineBanner.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FF46D94920F62C8D005E3018 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FF46D94C20F62CBB005E3018 /* DeviceHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		FF9F1A1E20EB8B9200EBA800 /* MailContact */ = {
@@ -140,6 +172,7 @@
 		FFF153D320D158A500987EFD /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				FF46D94720F62C5B005E3018 /* OfflineBannerView */,
 				FF319B2620F4AA56000A5826 /* LoadingView */,
 				FF9F1A1E20EB8B9200EBA800 /* MailContact */,
 				FFB73C2420ECFB4A00E42EC8 /* Ripple */,
@@ -262,6 +295,9 @@
 				FFB73C2D20ECFC3D00E42EC8 /* LayerAnimator.swift in Sources */,
 				FFB73C3020ECFCBD00E42EC8 /* UIKit+Extension+Ripple.swift in Sources */,
 				FFF153D820D158CA00987EFD /* ContactActionsDelegate.swift in Sources */,
+				FF46D94F20F62CD1005E3018 /* Foundation+Extension+OfflineBanner.swift in Sources */,
+				FF46D94D20F62CBB005E3018 /* DeviceHelper.swift in Sources */,
+				FF46D94B20F62C9E005E3018 /* OfflineBannerView.swift in Sources */,
 				FF319B2C20F4AC26000A5826 /* SVRadialGradientLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
