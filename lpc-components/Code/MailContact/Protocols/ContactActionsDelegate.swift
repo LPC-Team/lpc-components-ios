@@ -8,4 +8,5 @@
 
 public protocol ContactActionsDelegate: class {
     func onCopyMail()
+    func onErrorCallPhone()
 }
