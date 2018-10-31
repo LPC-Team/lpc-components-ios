@@ -37,9 +37,9 @@ public final class OfflineBannerView: UIView {
     
     var height: CGFloat = OfflineBannerView.defaultHeight
     
-    private let isIPhoneX = DeviceHelper.isIPhoneX
-    private var startY: CGFloat = 0 // It changes if iPhone is X
-    private var marginLeftRight: CGFloat = 0 // It changes if iPhone is X
+    private let isWithNotch = DeviceHelper.isWithNotch
+    private var startY: CGFloat = 0 // It changes if iPhone with notch
+    private var marginLeftRight: CGFloat = 0 // It changes if iPhone with notch
     
     public var text: String? {
         didSet {
@@ -52,7 +52,7 @@ public final class OfflineBannerView: UIView {
     
     public var color: UIColor? {
         didSet {
-            if self.isIPhoneX {
+            if self.isWithNotch {
                 backgroundColor = UIColor.clear
             } else {
                 backgroundColor = self.color
@@ -92,7 +92,7 @@ public final class OfflineBannerView: UIView {
         super.init(frame: frame)
         
         if let rootView = UIApplication.shared.keyWindow {
-            if self.isIPhoneX {
+            if self.isWithNotch {
                 self.marginLeftRight = 10
             }
             let newContainerFrame = CGRect(x: self.marginLeftRight, y: 0, width: rootView.frame.width - (self.marginLeftRight * 2), height: self.height)
@@ -120,7 +120,7 @@ public final class OfflineBannerView: UIView {
         self.color = OfflineBannerView.defaultColor.hexStringToUIColor()
         self.font = OfflineBannerView.defaultFont
         
-        if self.isIPhoneX {
+        if self.isWithNotch {
             self.ibViewContainer.layer.cornerRadius = OfflineBannerView.defaultCornerRadius
             self.startY = UIApplication.shared.statusBarFrame.height
         }
@@ -151,7 +151,7 @@ public final class OfflineBannerView: UIView {
             UIView.animate(withDuration: self.animationDuration, animations: {
                 self.frame = newFrame
             }, completion: { [weak self] _ in
-                if !(self?.isIPhoneX ?? false) {
+                if !(self?.isWithNotch ?? false) {
                     UIApplication.shared.delegate?.window??.windowLevel = UIWindowLevelNormal
                 }
                 self?.isHidden = true
@@ -171,7 +171,7 @@ public final class OfflineBannerView: UIView {
             isHidden = false
             let newFrame = CGRect(x: 0, y: self.startY, width: frame.width, height: frame.height)
             
-            if !self.isIPhoneX {
+            if !self.isWithNotch {
                 UIApplication.shared.delegate?.window??.windowLevel = UIWindowLevelStatusBar + 1
             }
             UIView.animate(withDuration: self.animationDuration, animations: {
