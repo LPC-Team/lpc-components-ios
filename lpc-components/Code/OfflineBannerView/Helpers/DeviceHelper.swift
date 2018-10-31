@@ -10,11 +10,18 @@ import UIKit
 
 enum DeviceHelper {
     
-    static var isIPhoneX: Bool {
-        if UIDevice().userInterfaceIdiom == .phone {
-            return UIScreen.main.nativeBounds.height == 2436
+    static var isWithNotch: Bool {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            switch UIScreen.main.nativeBounds.height {
+            case 1136, 1334, 1920, 2208:
+                return false
+            case 2436, 2688, 1792:
+                return true
+            default:
+                return false
+            }
         }
-        
+        // iPad
         return false
     }
 }
