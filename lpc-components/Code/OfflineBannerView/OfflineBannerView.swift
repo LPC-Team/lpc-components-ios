@@ -152,7 +152,7 @@ public final class OfflineBannerView: UIView {
                 self.frame = newFrame
             }, completion: { [weak self] _ in
                 if !(self?.isWithNotch ?? false) {
-                    UIApplication.shared.delegate?.window??.windowLevel = UIWindowLevelNormal
+                    UIApplication.shared.delegate?.window??.windowLevel = UIWindow.Level.normal
                 }
                 self?.isHidden = true
             })
@@ -172,7 +172,7 @@ public final class OfflineBannerView: UIView {
             let newFrame = CGRect(x: 0, y: self.startY, width: frame.width, height: frame.height)
             
             if !self.isWithNotch {
-                UIApplication.shared.delegate?.window??.windowLevel = UIWindowLevelStatusBar + 1
+                UIApplication.shared.delegate?.window??.windowLevel = UIWindow.Level.statusBar + 1
             }
             UIView.animate(withDuration: self.animationDuration, animations: {
                 self.frame = newFrame

@@ -57,7 +57,7 @@ extension UIView {
                 size: CGSize(
                     width: radius,
                     height: radius))
-            timingFunction = kCAMediaTimingFunctionEaseIn
+            timingFunction = CAMediaTimingFunctionName.easeIn.rawValue
             
         case .unreveal:
             originRect = CGRect(
@@ -68,7 +68,7 @@ extension UIView {
                     width: radius,
                     height: radius))
             newRect = startFrame
-            timingFunction = kCAMediaTimingFunctionEaseOut
+            timingFunction = CAMediaTimingFunctionName.easeOut.rawValue
         }
         
         let originPath = CGPath(ellipseIn: originRect, transform: nil)
@@ -80,7 +80,7 @@ extension UIView {
         layer.mask = maskLayer
         
         let revealAnimation = CABasicAnimation(keyPath: "path")
-        revealAnimation.timingFunction = CAMediaTimingFunction(name: timingFunction)
+        revealAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName(rawValue: timingFunction))
         revealAnimation.fromValue = oldPath
         revealAnimation.toValue = newPath
         revealAnimation.duration = 0.33

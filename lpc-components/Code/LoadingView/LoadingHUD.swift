@@ -26,7 +26,7 @@ public final class LoadingHUD: UIView {
                     let frame = CGRect(x: (sharedView.frame.size.width - 55) / 2, y: (sharedView.frame.size.height - 20) / 2, width: 55, height: 20)
                     sharedView.loadingView = LoadingView(frame: frame)
                     sharedView.addSubview(sharedView.loadingView)
-                    sharedView.bringSubview(toFront: sharedView.loadingView)
+                    sharedView.bringSubviewToFront(sharedView.loadingView)
                     sharedView.loadingView.isAnimating = true
                     let layer = SVRadialGradientLayer()
                     layer.frame = sharedView.bounds
@@ -49,14 +49,14 @@ public final class LoadingHUD: UIView {
             for window: UIWindow in frontToBackWindows {
                 let windowOnMainScreen: Bool = window.screen == UIScreen.main
                 let windowIsVisible: Bool = !window.isHidden && window.alpha > 0
-                let windowLevelNormal: Bool = window.windowLevel == UIWindowLevelNormal
+                let windowLevelNormal: Bool = window.windowLevel == UIWindow.Level.normal
                 if windowOnMainScreen && windowIsVisible && windowLevelNormal {
                     window.addSubview(self.getSharedView())
                     break
                 }
             }
         }
-        self.getSharedView().superview?.bringSubview(toFront: self.getSharedView())
+        self.getSharedView().superview?.bringSubviewToFront(self.getSharedView())
     }
     
     // MARK: Public Methods
