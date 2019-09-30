@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LPCComponents"
-  s.version      = "1.3.3"
+  s.version      = "1.3.4"
   s.summary      = "LPCComponents library"
   s.description  = "LPCComponents is a library for all LPC components"
   s.homepage     = "https://github.com/LPC-Team/lpc-components-ios"
