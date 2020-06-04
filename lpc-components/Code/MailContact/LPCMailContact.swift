@@ -23,6 +23,7 @@ public final class LPCMailContact {
     let copyText: String!
     let cancelText: String!
     let phoneNumber: String?
+    let textColor: UIColor?
     let contactEmailColor: UIColor?
     let mailComposeDelegate: MFMailComposeViewControllerDelegate!
     let contactActionsDelegate: ContactActionsDelegate!
@@ -39,6 +40,7 @@ public final class LPCMailContact {
                 copyText: String,
                 cancelText: String,
                 phoneNumber: String? = nil,
+                textColor: UIColor? = nil,
                 contactEmailColor: UIColor? = nil,
                 mailComposeDelegate: MFMailComposeViewControllerDelegate,
                 contactActionsDelegate: ContactActionsDelegate) {
@@ -52,6 +54,7 @@ public final class LPCMailContact {
         self.copyText = copyText
         self.cancelText = cancelText
         self.phoneNumber = phoneNumber
+        self.textColor = textColor
         self.contactEmailColor = contactEmailColor
         self.mailComposeDelegate = mailComposeDelegate
         self.contactActionsDelegate = contactActionsDelegate
@@ -67,6 +70,7 @@ public final class LPCMailContact {
                             copyText: String,
                             cancelText: String,
                             phoneNumber: String? = nil,
+                            textColor: UIColor? = nil,
                             contactEmailColor: UIColor? = nil) {
         guard let mailComposeDelegate = viewController as? MFMailComposeViewControllerDelegate else {
             fatalError("Your viewController \(viewController) must implement MFMailComposeViewControllerDelegate")
@@ -86,6 +90,7 @@ public final class LPCMailContact {
                   copyText: copyText,
                   cancelText: cancelText,
                   phoneNumber: phoneNumber,
+                  textColor: textColor,
                   contactEmailColor: contactEmailColor,
                   mailComposeDelegate: mailComposeDelegate,
                   contactActionsDelegate: contactActionsDelegate)
@@ -107,6 +112,7 @@ public final class LPCMailContact {
             header.title = self.title
             header.message = self.message
             header.contactEmail = self.contactEmail
+            header.textColor = self.textColor
             header.contactEmailColor = self.contactEmailColor
             actionSheetController.addHeader(header)
         }

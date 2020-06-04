@@ -49,6 +49,16 @@ final class EmailActionSheetHeader: UIView {
         }
     }
     
+    
+    var textColor: UIColor? {
+        didSet {
+            if let textColor = self.textColor {
+                self.ibTitleLabel.textColor = textColor
+                self.ibMessageLabel.textColor = textColor
+            }
+        }
+    }
+    
     var contactEmailColor: UIColor? {
         didSet {
             if let contactEmailColor = self.contactEmailColor {
